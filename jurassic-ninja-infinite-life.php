@@ -9,14 +9,24 @@
  * Text Domain: jurassic-ninja-infinite-life
  * Domain Path: /languages
  * License: MIT
+ * Requires at least: 5.9
+ * Tested up to: 6.2
+ * Requires PHP: 7.4
+ *
+ * WC tested up to: 7.6
+ * WC requires at least: 7.0
  *
  */
 
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
 use JPry\JurassicNinjaInfiniteLife\Autoloader;
+use JPry\JurassicNinjaInfiniteLife\Plugin;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || die;
+
+// Define constants.
+define( 'JPRY_JNIL', '1.0.0' ); // WRCS: DEFINED_VERSION.
 
 // Load autoloader.
 require_once __DIR__ . '/src/Autoloader.php';
@@ -38,6 +48,6 @@ add_action(
 add_action(
 	'woocommerce_loaded',
 	function() {
-
+		( new Plugin() )->register();
 	}
 );
