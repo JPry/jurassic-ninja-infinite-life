@@ -1,0 +1,17 @@
+{
+    "name": "jpry/jurassic-ninja-infinite-life",
+    "require": {
+        "automattic/jetpack-autoloader": "^2.11"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "JPry\\JurassicNinjaInfiniteLife\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "automattic/jetpack-autoloader": true
+        }
+    }
+}
