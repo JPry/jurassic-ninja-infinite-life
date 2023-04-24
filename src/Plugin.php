@@ -2,6 +2,8 @@
 
 namespace JPry\JurassicNinjaInfiniteLife;
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Class Plugin
  *

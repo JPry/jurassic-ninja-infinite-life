@@ -23,7 +23,7 @@ use JPry\JurassicNinjaInfiniteLife\Autoloader;
 use JPry\JurassicNinjaInfiniteLife\PluginFactory;
 
 // If this file is called directly, abort.
-defined( 'ABSPATH' ) || die;
+defined( 'ABSPATH' ) || exit;
 
 // Define constants.
 define( 'JPRY_JNIL', '1.0.0' ); // WRCS: DEFINED_VERSION.
