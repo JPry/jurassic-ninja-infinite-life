@@ -27,4 +27,5 @@ This plugin utilizes [Action Scheduler](https://actionscheduler.org) (bundled wi
 Allows you to change how frequently the action is scheduled to change extend the site's life. The value is in seconds.
 
 **Type:** `int`
+
 **Default:** `172800` (2 days in seconds)
