@@ -68,7 +68,7 @@ class Autoloader {
 						<?php
 						printf(
 							/* translators: 1: opening code tag. 2: closing code tag */
-							esc_html__( 'Your installation of this plugin is incomplete. If you installed from GitHub, run %scomposer install%s.', 'jurassic-ninja-infinite-life' ),
+							esc_html__( 'Your installation of this plugin is incomplete. If you installed from GitHub, run %1$scomposer install%2$s.', 'jurassic-ninja-infinite-life' ),
 							'<code>',
 							'</code>'
 						);
