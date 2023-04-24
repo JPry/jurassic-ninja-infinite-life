@@ -50,6 +50,19 @@ class Plugin {
 				$this->extend_jurassic_ninja_life();
 			}
 		);
+
+		add_action(
+			"update_option_{$this->option_id}",
+			function( $old_value, $value ) {
+				if ( 'yes' === $value ) {
+					$this->extend_jurassic_ninja_life();
+				} else {
+					as_unschedule_all_actions( $this->action_hook );
+				}
+			},
+			10,
+			2
+		);
 	}
 
 	/**
@@ -97,18 +110,29 @@ class Plugin {
 			return;
 		}
 
+		$this->schedule_next_action();
+	}
+
+	/**
+	 * Schedule the next instance of the action.
+	 *
+	 * @return void
+	 */
+	private function schedule_next_action() {
 		/**
 		 * Filter the frequency of the action.
 		 *
 		 * @param int $action_frequency The frequency of the action in seconds.
 		 */
-		$action_frequency = apply_filters( 'jurassic_ninja_infinite_life_action_frequency', 2 * DAY_IN_SECONDS );
+		$action_frequency = abs( apply_filters( 'jurassic_ninja_infinite_life_action_frequency', 2 * DAY_IN_SECONDS ) );
 
 		// Schedule the action.
-		as_schedule_recurring_action(
-			time(),
-			$action_frequency,
-			$this->action_hook
+		as_schedule_single_action(
+			time() + $action_frequency,
+			$this->action_hook,
+			[],
+			'',
+			true
 		);
 	}
 
@@ -141,5 +165,7 @@ class Plugin {
 				'body'    => wp_json_encode( [ 'domain' => $domain ] ),
 			]
 		);
+
+		$this->maybe_schedule_action();
 	}
 }
