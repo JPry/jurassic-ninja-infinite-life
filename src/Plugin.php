@@ -22,6 +22,11 @@ class Plugin {
 		return 'yes' === get_option( $this->option_id, 'no' );
 	}
 
+	/**
+	 * Register our hooks with WordPress.
+	 *
+	 * @return void
+	 */
 	public function register() {
 		add_filter(
 			'woocommerce_settings_features',
@@ -45,6 +50,13 @@ class Plugin {
 		);
 	}
 
+	/**
+	 * Add the infinite life feature to the WooCommerce settings.
+	 *
+	 * @param array $features
+	 *
+	 * @return array
+	 */
 	private function add_settings_features( array $features ) {
 		$features[] = [
 			'title' => __( 'Jurasic Ninja Infinite Life', 'jurassic-ninja-infinite-life' ),
