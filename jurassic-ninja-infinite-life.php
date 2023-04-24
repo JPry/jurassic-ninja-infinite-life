@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Jurassic Ninja Infinite Life
  * Plugin URI:
- * Description: This plugin extends the life of Jurassic Ninja sites to indefinitely.
+ * Description: This plugin extends the life of Jurassic Ninja sites indefinitely.
  * Author: Jeremy Pry
  * Author URI: https://jeremypry.com
  * Version: 1.0.0
@@ -15,7 +15,6 @@
  *
  * WC tested up to: 7.6
  * WC requires at least: 7.0
- *
  */
 
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
@@ -28,12 +27,6 @@ defined( 'ABSPATH' ) || exit;
 // Define constants.
 define( 'JPRY_JNIL', '1.0.0' ); // WRCS: DEFINED_VERSION.
 
-// Load autoloader.
-require_once __DIR__ . '/src/Autoloader.php';
-if ( ! Autoloader::init() ) {
-	return;
-}
-
 // Declare compatibility with HPOS.
 add_action(
 	'before_woocommerce_init',
@@ -43,6 +36,12 @@ add_action(
 		}
 	}
 );
+
+// Load autoloader.
+require_once __DIR__ . '/src/Autoloader.php';
+if ( ! Autoloader::init() ) {
+	return;
+}
 
 // Load plugin on woocommerce_loaded hook.
 add_action(
