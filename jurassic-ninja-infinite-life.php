@@ -16,6 +16,8 @@
  *
  * WC tested up to: 7.6
  * WC requires at least: 7.0
+ *
+ * GitHub Plugin URI: JPry/jurassic-ninja-infinite-life
  */
 
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
