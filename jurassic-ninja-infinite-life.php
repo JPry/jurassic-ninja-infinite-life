@@ -1,14 +1,15 @@
 <?php
 /**
  * Plugin Name: Jurassic Ninja Infinite Life
- * Plugin URI:
+ * Plugin URI:  https://github.com/JPry/jurassic-ninja-infinite-life
  * Description: This plugin extends the life of Jurassic Ninja sites indefinitely.
- * Author: Jeremy Pry
- * Author URI: https://jeremypry.com
- * Version: 1.0.0
+ * Author:      Jeremy Pry
+ * Author URI:  https://jeremypry.com
+ * Version:     1.0.0
  * Text Domain: jurassic-ninja-infinite-life
  * Domain Path: /languages
- * License: MIT
+ * License:     MIT
+ *
  * Requires at least: 5.9
  * Tested up to: 6.2
  * Requires PHP: 7.4
