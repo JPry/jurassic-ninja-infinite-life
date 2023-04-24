@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Class PluginFactory
  *
- * @since x.x.x
+ * @since 1.0.0
  */
 class PluginFactory {
 
