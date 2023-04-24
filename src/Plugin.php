@@ -5,9 +5,11 @@ namespace JPry\JurassicNinjaInfiniteLife;
 /**
  * Class Plugin
  *
- * @since %VERSION%
+ * @since x.x.x
  */
 class Plugin {
+
+	private string $option_id = 'jurassic-ninja-infinite-life';
 
 	public function register() {
 		add_filter(
@@ -19,11 +21,12 @@ class Plugin {
 	}
 
 	private function add_settings_features( array $features ) {
-		$features['jurassic-ninja-infinite-life'] = [
-			'description' => __( 'This plugin extends the life of Jurassic Ninja sites to indefinitely.', 'jurassic-ninja-infinite-life' ),
-			'enabled_by_default' => true,
-			'name' => __( 'Jurassic Ninja Infinite Life', 'jurassic-ninja-infinite-life' ),
-			'is_experimental' => false,
+		$features[] = [
+			'title' => __( 'Jurasic Ninja Infinite Life', 'jurassic-ninja-infinite-life' ),
+			'desc'  => __( 'This plugin extends the life of Jurassic Ninja sites indefinitely.', 'jurassic-ninja-infinite-life' ),
+			'id'    => $this->option_id,
+			'type'  => 'checkbox',
+			'class' => '',
 		];
 
 		return $features;
