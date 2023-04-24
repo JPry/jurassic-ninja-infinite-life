@@ -1,0 +1,52 @@
+# Copyright (C) 2023 Jeremy Pry
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: Jurassic Ninja Infinite Life 1.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/jurassic-ninja-infinite-life\n"
+"POT-Creation-Date: 2023-04-24 21:14:10+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2023-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.7\n"
+
+#: src/Autoloader.php:59
+msgid ""
+"Your installation of this plugin is incomplete. If you installed from "
+"GitHub, please run \"composer install\"."
+msgstr ""
+
+#: src/Autoloader.php:71
+#. translators: 1: opening code tag. 2: closing code tag
+msgid ""
+"Your installation of this plugin is incomplete. If you installed from "
+"GitHub, run %1$scomposer install%2$s."
+msgstr ""
+
+#: src/Plugin.php:87
+msgid "Jurasic Ninja Infinite Life"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "This plugin extends the life of Jurassic Ninja sites indefinitely."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Jurassic Ninja Infinite Life"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/JPry/jurassic-ninja-infinite-life"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Jeremy Pry"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://jeremypry.com"
+msgstr ""
