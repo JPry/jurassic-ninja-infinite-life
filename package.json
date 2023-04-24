@@ -1,0 +1,38 @@
+{
+  "name": "jurassic-ninja-infinite-life",
+  "version": "1.0.0",
+  "description": "This plugin extends the life of Jurassic Ninja sites indefinitely.",
+  "author": "JPry",
+  "homepage": "https://github.com/JPry/jurassic-ninja-infinite-life#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPry/jurassic-ninja-infinite-life.git"
+  },
+  "config": {
+    "translate": true,
+    "version_replace_paths": [
+      "src",
+      "jurassic-ninja-infinite-life.php"
+    ]
+  },
+  "devDependencies": {
+    "node-wp-i18n": "~1.2.3"
+  },
+  "bugs": {
+    "url": "https://github.com/JPry/jurassic-ninja-infinite-life/issues"
+  },
+  "scripts": {
+    "build": "npm run makepot && npm run archive",
+    "prearchive": "rm -rf vendor && composer install --no-dev && composer dump-autoload -o",
+    "archive": "composer archive --file=$npm_package_name --format=zip",
+    "postarchive": "rm -rf $npm_package_name && unzip $npm_package_name.zip -d $npm_package_name && rm $npm_package_name.zip && zip -r $npm_package_name.zip $npm_package_name && rm -rf $npm_package_name",
+    "makepot": "wpi18n makepot --domain-path languages --pot-file $npm_package_name.pot --type plugin --main-file $npm_package_name.php --exclude node_modules,tests,docs",
+    "lint:php": "vendor/bin/phpcs",
+    "lint:php:diff": "./bin/phpcs-diff.sh"
+  },
+  "engines": {
+    "node": ">=10 <=16",
+    "npm": ">=6"
+  }
+}
