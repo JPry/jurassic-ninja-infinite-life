@@ -50,3 +50,11 @@ add_action(
 		PluginFactory::get_plugin()->register();
 	}
 );
+
+// Register deactivation hook.
+register_deactivation_hook(
+	__FILE__,
+	function() {
+		PluginFactory::get_plugin()->deactivate();
+	}
+);

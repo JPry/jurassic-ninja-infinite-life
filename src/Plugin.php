@@ -53,6 +53,16 @@ class Plugin {
 	}
 
 	/**
+	 * Clean up our actions and options when the plugin is deactivated.
+	 *
+	 * @return void
+	 */
+	public function deactivate() {
+		as_unschedule_all_actions( $this->action_hook );
+		delete_option( $this->option_id );
+	}
+
+	/**
 	 * Add the infinite life feature to the WooCommerce settings.
 	 *
 	 * @param array $features
