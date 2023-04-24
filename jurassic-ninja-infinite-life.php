@@ -20,7 +20,7 @@
 
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
 use JPry\JurassicNinjaInfiniteLife\Autoloader;
-use JPry\JurassicNinjaInfiniteLife\Plugin;
+use JPry\JurassicNinjaInfiniteLife\PluginFactory;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || die;
@@ -48,6 +48,6 @@ add_action(
 add_action(
 	'woocommerce_loaded',
 	function() {
-		( new Plugin() )->register();
+		PluginFactory::get_plugin()->register();
 	}
 );
