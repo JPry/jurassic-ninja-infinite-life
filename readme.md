@@ -20,6 +20,8 @@ This plugin indefinitely extends the life of your Jurassic Ninja site.
 
 This plugin utilizes [Action Scheduler](https://actionscheduler.org) (bundled with WooCommerce) to schedule an action every two days that extends the life of the Jurassic Ninja site.
 
+When updates are released, they can be installed automatically by using the [Git Updater](https://github.com/afragen/git-updater/releases/latest) plugin.
+
 ## Available filters
 
 ### `jurassic_ninja_infinite_life_action_frequency`
