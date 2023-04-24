@@ -11,6 +11,15 @@ class Plugin {
 
 	private string $option_id = 'jurassic-ninja-infinite-life';
 
+	/**
+	 * Determine if infinite life is enabled.
+	 *
+	 * @return bool
+	 */
+	public function infinite_life_enabled(): bool {
+		return 'yes' === get_option( $this->option_id, 'no' );
+	}
+
 	public function register() {
 		add_filter(
 			'woocommerce_settings_features',
