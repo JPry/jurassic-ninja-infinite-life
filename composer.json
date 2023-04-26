@@ -18,6 +18,7 @@
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^v0.7",
+        "exussum12/coverage-checker": "^1.0",
         "woocommerce/woocommerce-sniffs": "^0.1.3"
     }
 }
